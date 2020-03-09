@@ -18,7 +18,7 @@ mkdir -p files/etc/config
 cp -f ../wireless files/etc/config/
 
 #修改机器名称
-sed -i 's/OpenWrt/RaspberryPi4/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/RaspberryPi/g' package/base-files/files/bin/config_generate
 
 # Change timezone
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
