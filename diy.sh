@@ -23,7 +23,28 @@ sed -i 's/OpenWrt/RaspberryPi/g' package/base-files/files/bin/config_generate
 # Change timezone
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-git clone https://github.com/Level6me/myfeeds.git package/
+#git clone https://github.com/Level6me/myfeeds.git package/
 #git i package/luci-app-vssr
+        cd openwrt/package
+        svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall
+        svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping
+        svn co https://github.com/Lienol/openwrt-package/trunk/package/dns2socks
+        svn co https://github.com/Lienol/openwrt-package/trunk/package/brook
+        svn co https://github.com/Lienol/openwrt-package/trunk/package/chinadns-ng
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray-plugin
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-adbyby-plus
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-ssr-plus
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/srelay
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/adbyby
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dnsforwarder
+        svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/kcptun    
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
